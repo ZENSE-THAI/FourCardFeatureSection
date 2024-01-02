@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+
+    --fs-13: .813rem;
+    --fs-15: .938rem;
+    --fs-17: 1.063rem;
+
+    --h1: 1.5rem;;
+    --h2: 1.5rem;
+    --h3: 1.2rem;
+
+    --h-p:.875rem;
+
+
+    @media (width > 810px) {
+        --h1: 2.5rem;
+        --h2: 2.5rem;
+
+        --h-p: 1rem;
+
+    }
+}
+
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--fs-15);
+    background-color: var(--Very-Light-Gray);
+    max-height: 100vh;
+}
+
+
+.container {
+    padding:0 1rem;
+    margin: 0 auto;
+    max-width: calc(100% - 20px);
+}
+
+header {
+    padding-block: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-size: var(--h1);
+    font-weight: 200;
+    color: var(--Grayish-Blue);
+}
+
+header h2 {
+    font-size: var(--h2);
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 1rem;
+}
+
+header p {
+    color: var(--Grayish-Blue);
+    font-size: var(--h-p);
+    font-weight: 200;
+    letter-spacing: .5px;
+    max-width: 550px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.cards .card {
+    padding: 1.8rem 2rem;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    border-top: 4px solid transparent;
+    box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.7);
+}
+
+.cards .card:nth-child(1){
+    border-color: var(--Cyan);
+}
+.cards .card:nth-child(2){
+    border-color: var(--Red);
+}
+.cards .card:nth-child(3){
+    border-color: var(--Orange);
+}
+.cards .card:nth-child(4){
+    border-color: var(--Blue);
+}
+
+.cards .card h3{
+    font-size: var(--h3);
+    color: var(--Very-Dark-Blue);
+    margin-bottom: .5rem;
+}
+.cards .card p{
+    font-size: var(--fs-13);
+    color: var(--Grayish-Blue);
+    line-height: 1.5;
+    letter-spacing: .5px;
+    margin-bottom: 1rem;
+}
+.cards .card img{
+    display: block;
+    margin-left: auto;
+}
+
+@media (width > 700px) {
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+}
+
+
+@media (width >= 1200px) {
+    .cards .card:nth-child(odd){
+        transform: translateY(50%);
+    }
+}
+
+
+footer {
+    padding:4rem 0 2rem 0;
+}
